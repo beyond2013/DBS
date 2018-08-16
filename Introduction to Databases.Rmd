@@ -1,0 +1,70 @@
+---
+title: "Introduction to Databases"
+author: "Imran Ali"
+date: "August 15, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+1. database is a collection of related data
+2. database management system (DBMS) is a software that manages and controls access
+to the database.
+3. database application is a program that interacts with the database at some point in its execution.
+
+You interact with a database when:
+1. purchasing goods from supermarket
+2. purchasing goods using credit card.
+3. borrowing book from a library
+4. using internet
+
+
+Traditional File-Based Systems:
+Why do we need to know about file-based systems?
+1. Understanding their problems may prevent us from repeating these problems in database systems
+2. Such knowledge is extremely useful when converting an existing file-based system to database system.
+
+What is file-based system?
+It is a collection of programs, where each program define and manages its own data.
+
+When file-based system breaks down?
+It breaks down when we have to cross reference large amounts of data stored in hundreds of files.
+
+Drawbacks/ Limitations of File-Based approach:
+1. Separation and Isolation of data.
+2. Duplication of data.
+3. Program Data dependence: physical structure and storage of data files and record are defined in application code.
+4. Incompatible file formats.
+5. No facility for asking unplanned queries. 
+6. No provision for security or integrity.
+7. No existence of recovery in case of hardware or software failure
+8. No provision for shared access to files.
+
+Formal definition of Database:
+A shared collection of logically related data and its description, designed to meet the information needs of an organization.
+
+Description of the data is known as system catalog, or data dictionary or meta data.
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
