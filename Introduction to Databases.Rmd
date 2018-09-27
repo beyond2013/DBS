@@ -10,6 +10,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+**Note: Most of the contents of these notes have been extracted from the book "Database Systems A practical approach to Design, Implementation, and Management" by Thomas Connolly and Carolyn Begg sixth edition. **
+
 # Introduction to Databases:
 ## Introduction:
 
