@@ -1,4 +1,4 @@
-#Note:  
+# Note:  
 
 **Contents of this file have been taken from chapter 3 of the book Database Systems: An application oriented approach 2nd Edition by Michael Kifer, Arthur Bernstein, and Philip M. Lewis.**
 
