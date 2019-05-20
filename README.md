@@ -28,3 +28,6 @@ Assignments: 15 marks
 2. http://www.sqlfiddle.com/  
 3. https://www.w3schools.com/sql/  
 
+## MySQL install guide
+
+[MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)
