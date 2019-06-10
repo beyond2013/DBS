@@ -14,5 +14,9 @@ The details of how data is stored in files belong to the **physical level** of d
 Early data-intensive applications worked directly with the physical schema. This choice was made for a numer of reasons: 
  
  1. Commercial database systems were rare and costly.
- 2. 
+ 2. Computers were slow, and working directly with the file system offered a performance advantage.
+ 3. Most early applications were primitive by today's standards, and building a level of abstraction between those programs and the file system did not seem justified. 
+
+ **A serious drawback of this approach** is that changes to the file format at the physical level could have costly repercussions for software maintenance. The year 2000 problem(data item representing year was hard-coded as two digit number) was a good example of such repercussions.
+
 
