@@ -139,23 +139,23 @@ Look at the following two tables:
 
 **Persons** table:
 
-    ---------------------------------------
-    |PersonID	|LastName |	FirstName |	Age |
-    ---------------------------------------
-    |1	      |Hansen	  | Ola       |	30  |
-    |2	      |Svendson |	Tove      |	23  |
-    |3	      |Pettersen|	Kari      | 20  |
-    ---------------------------------------
+
+|PersonID |LastName   |	FirstName |	Age |
+|---------|-----------|-----------|-----|
+|1	      |Hansen	  | Ola       |	30  |
+|2	      |Svendson   |	Tove      |	23  |
+|3	      |Pettersen  |	Kari      | 20  |
+
 
 **Orders** table:
 
-    ------------------------------------
-    |OrderID	|OrderNumber |	PersonID |
-    ------------------------------------
-    |1	      |123         |   1       |
-    |2	      |456         |   1       |
-    |3	      |678         |	 2       |
-    ------------------------------------
+
+|OrderID|OrderNumber |PersonID |
+|-------|------------|---------|
+|1	    |123         |  1      |
+|2	    |456         |  1      |
+|3	    |678         |	2      |
+
 
 Notice that the **PersonID** column in the **Orders** table points to the **PersonID** column in the **Persons** table.
 
