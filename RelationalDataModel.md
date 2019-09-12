@@ -14,5 +14,24 @@ The details of how data is stored in files belong to the **physical level** of d
 Early data-intensive applications worked directly with the physical schema. This choice was made for a numer of reasons: 
  
  1. Commercial database systems were rare and costly.
- 2. 
+ 2. Computers were slow and working directly with the file system offered a performance advantage.
+
+A serious drawback of this approach is that changes to the file format at the physical level could hae costly repercussions for the software maintenance. The year 2000 problem was a good example of such repercussions. (The solution to the Y2K problem is data abstraction, a Date data type). 
+
+The **conceptual model** hides the details of the physical data representation and instead describes data in terms of higher-level concepts that are closer to the way humans view it. 
+
+For instance the conceptual schema could represent some of the information about students as 
+
+STUDENT (Id: INT, Name: STRING, Address: STRING, Status: STRING)
+
+While this schema might look similar to the way file records are represented, the important point is that the different pieces of information it describes might be physically stored in a different way than that described in the schema. Indeed, these pieces of information might not even reside in the same file(perhaps not even on the same computer).
+
+The possibility of having separate schemas at the physical and conceptual levels leads to the simple yet powerful idea of physical data independence. 
+
+Instead of working directly with the file system, applications see only the conceptual schema. The DBMS maps data between the conceptual and physical levels automatically. 
+
+If the physical representation changes, all that needs to be done is to change the mapping between the levels, and all applications that deal exclusively with the conceptual schema will continue to work with the new physical data structures.
+
+The third level of abstraction is called the **external schema**(also known as he user or view abstraction level). The external schema is used to customize the conceptual schema to the needs of various classes of users, and it also plays a role in database security.
+
 
