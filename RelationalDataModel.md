@@ -34,4 +34,6 @@ If the physical representation changes, all that needs to be done is to change t
 
 The third level of abstraction is called the **external schema**(also known as he user or view abstraction level). The external schema is used to customize the conceptual schema to the needs of various classes of users, and it also plays a role in database security.
 
+The external schema looks and feels like a conceptual schema, and both are defined in essentially the same way in modern DBMSs. However, while there is a single conceptual schema per databse, there might be several external schemas, usually one per user category.
 
+Conceptual data independence: Applications tailored to the needs of specific user groups can be designed to use the external schemas appropriate for these groups. The mapping between the external and conceptual schemas is the responsibility of the DBMS, so applications are insulated from changes in the conceptual schema as well as from changes in the physical schema. 
