@@ -27,4 +27,8 @@ Assignments: 15 marks
 1. https://www.mysql.com/  
 2. http://www.sqlfiddle.com/  
 3. https://www.w3schools.com/sql/  
+4. https://classroom.udacity.com/courses/ud197 
+5. https://www.udacity.com/course/database-systems-concepts-design--ud150
+## MySQL install guide
 
+[MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)

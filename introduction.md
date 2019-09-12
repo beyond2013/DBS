@@ -1,16 +1,4 @@
----
-title: "Introduction to Databases"
-author: "Imran Ali"
-date: "August 15, 2018"
-output:
-  pdf_document: default
-  html_document: default
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-**Note: Most of the contents of these notes have been extracted from the book "Database Systems A practical approach to Design, Implementation, and Management" by Thomas Connolly and Carolyn Begg sixth edition. **
+**Note: Most of the contents of these notes have been extracted from the book "Database Systems A practical approach to Design, Implementation, and Management" by Thomas Connolly and Carolyn Begg sixth edition.**
 
 # Introduction to Databases:
 ## Introduction:
@@ -107,17 +95,14 @@ if the underlying database is changed.
 Above mentioned functionalities of DBMS differ from product to product.
 
 ## Components of the DBMS Environment
-```{r, echo=FALSE, out.width='80%'}
-knitr::include_graphics('./figures/components.png')
-```
+![](./figures/components.png)
+
 
 ### Hardware
 The DBMS and the applications require hardware to run. The hardware can range
 from a **single personal computer** to a **single mainframe** or a **network of computers**.
 
-```{r, echo=FALSE, out.width='90%'}
-knitr::include_graphics('./figures/components2.png')
-```
+![](./figures/components2.png)
 
 A simplified hardware configuration for a DBMS is illustrated in figure above. It consists of
 a network of small servers, with a central server located in London running the
