@@ -39,3 +39,44 @@ The external schema looks and feels like a conceptual schema, and both are defin
 Conceptual data independence: Applications tailored to the needs of specific user groups can be designed to use the external schemas appropriate for these groups. The mapping between the external and conceptual schemas is the responsibility of the DBMS, so applications are insulated from changes in the conceptual schema as well as from changes in the physical schema. 
 
 ![](./figures/DataIndependence.jpeg)
+
+**Data model** A data model consists of a set of concepts and languages for describing
+
+1. Conceptual and external Schemas. A schema specifies the structure of the data stored in the  database. Schemas are described using a **data definition language(DDL)**.
+
+2. Constraints: A constraint specifies condition that the data items in the database must satisfy. A constraint specification sublanguage is usually part of the DDL.
+
+3. Operations on data: Operations on database items are described using a **data manipulation language(DML)**. The DML is usually the most important and interesting part of any data model because it is the set of operations that ultimately gives us the high-level data abstraction.
+
+## Relational Model
+Proposed by E. F. Codd in 1970 is built around a simple and natural mathematical structure the relation (or table). 
+
+A relation is two things in one: a schema and an instance of that schema. A **relation instance** is nothing more than a table with rows and named columns. The rows in a relation are called **tuples**, no two tuples in a relation instance can be the same. The **cardinality** of a relation instance is the number of tuples in it. 
+
+Because relations are set of tuples, the order of these tuples is considered immaterial. Similarly, because columns are named, their order in a table is of no importance either. 
+Below is the instance of the student relation.
+
+| Id   | Name  | Address        |
+|------|-------|----------------|
+| 1213 | Umer  | Satellite Town |
+| 1456 | Obiad | Jinnah Town    |
+
+Terms used in relational database theory and their SQL equivalent
+
+| Relational Database theory | SQL    |
+|----------------------------|--------|
+| tuple                      | row    |
+| attribute                  | column |
+| relation                   | table  |
+
+**Relation Schema** A relation schema consists of:
+
+1. The name of the relation. Relation names must be unique across the database. 
+2. The names of the attributes in the relation along with their associated domain names. A domain name is just a name given to some well-defined set of values. In programming languages, domain names are usually called types e.g. INTEGER, REAL, STRING.
+3. The integrity constraint (IC). Integrity constraints are restrictions on the relational instrance of this schema(i.e., restrictions on which tuples can appear in an instance of the relation). An instance of a schema is said to be legal if it satisfies all ICs associated with the schema.
+
+Below is the Student Schema:
+
+STUDENT (Id: INTEGER, Name: STRING, Address: STRING)
+
+This schema states that STUDENT relation must have exactly three attributes: Id, Name, Address with associated domains INTEGER and STRING. 
