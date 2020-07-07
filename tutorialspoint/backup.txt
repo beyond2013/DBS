@@ -1,0 +1,35 @@
+Loss of Volatile Storage
+A volatile storage like RAM stores all the active logs, disk buffers, and related data. In addition, it stores all the transactions that are being currently executed. What happens if such a volatile storage crashes abruptly? It would obviously take away all the logs and active copies of the database. It makes recovery almost impossible, as everything that is required to recover the data is lost.
+
+Following techniques may be adopted in case of loss of volatile storage −
+
+We can have checkpoints at multiple stages so as to save the contents of the database periodically.
+
+A state of active database in the volatile memory can be periodically dumped onto a stable storage, which may also contain logs and active transactions and buffer blocks.
+
+<dump> can be marked on a log file, whenever the database contents are dumped from a non-volatile memory to a stable one.
+
+Recovery
+When the system recovers from a failure, it can restore the latest dump.
+
+It can maintain a redo-list and an undo-list as checkpoints.
+
+It can recover the system by consulting undo-redo lists to restore the state of all transactions up to the last checkpoint.
+
+Database Backup & Recovery from Catastrophic Failure
+A catastrophic failure is one where a stable, secondary storage device gets corrupt. With the storage device, all the valuable data that is stored inside is lost. We have two different strategies to recover data from such a catastrophic failure −
+
+Remote backup &minu; Here a backup copy of the database is stored at a remote location from where it can be restored in case of a catastrophe.
+
+Alternatively, database backups can be taken on magnetic tapes and stored at a safer place. This backup can later be transferred onto a freshly installed database to bring it to the point of backup.
+
+Grown-up databases are too bulky to be frequently backed up. In such cases, we have techniques where we can restore a database just by looking at its logs. So, all that we need to do here is to take a backup of all the logs at frequent intervals of time. The database can be backed up once a week, and the logs being very small can be backed up every day or as frequently as possible.
+
+Remote Backup
+Remote backup provides a sense of security in case the primary location where the database is located gets destroyed. Remote backup can be offline or real-time or online. In case it is offline, it is maintained manually.
+
+![Remote Data Backup](fig/remote_data_backup.png)
+
+Online backup systems are more real-time and lifesavers for database administrators and investors. An online backup system is a mechanism where every bit of the real-time data is backed up simultaneously at two distant places. One of them is directly connected to the system and the other one is kept at a remote place as backup.
+
+As soon as the primary database storage fails, the backup system senses the failure and switches the user system to the remote storage. Sometimes this is so instant that the users can’t even realize a failure.
