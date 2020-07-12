@@ -1,42 +1,48 @@
 Relative data and information is stored collectively in file formats. A file is a sequence of records stored in binary format. A disk drive is formatted into several blocks that can store records. File records are mapped onto those disk blocks.
 
-File Organization
+## File Organization
+
 File Organization defines how file records are mapped onto disk blocks. We have four types of File Organization to organize file records −
 
 ![File Organization](fig/file_organization.png)
 
-Heap File Organization
+## Heap File Organization
+
 When a file is created using Heap File Organization, the Operating System allocates memory area to that file without any further accounting details. File records can be placed anywhere in that memory area. It is the responsibility of the software to manage the records. Heap File does not support any ordering, sequencing, or indexing on its own.
 
-Sequential File Organization
+## Sequential File Organization
+
 Every file record contains a data field (attribute) to uniquely identify that record. In sequential file organization, records are placed in the file in some sequential order based on the unique key field or search key. Practically, it is not possible to store all the records sequentially in physical form.
 
-Hash File Organization
+## Hash File Organization
+
 Hash File Organization uses Hash function computation on some fields of the records. The output of the hash function determines the location of disk block where the records are to be placed.
 
-Clustered File Organization
+## Clustered File Organization
+
 Clustered file organization is not considered good for large databases. In this mechanism, related records from one or more relations are kept in the same disk block, that is, the ordering of records is not based on primary key or search key.
 
-File Operations
+## File Operations
+
 Operations on database files can be broadly classified into two categories −
 
-Update Operations
+**Update Operations**
 
-Retrieval Operations
+**Retrieval Operations**
 
 Update operations change the data values by insertion, deletion, or update. Retrieval operations, on the other hand, do not alter the data but retrieve them after optional conditional filtering. In both types of operations, selection plays a significant role. Other than creation and deletion of a file, there could be several operations, which can be done on files.
 
-Open − A file can be opened in one of the two modes, read mode or write mode. In read mode, the operating system does not allow anyone to alter data. In other words, data is read only. Files opened in read mode can be shared among several entities. Write mode allows data modification. Files opened in write mode can be read but cannot be shared.
+**Open** − A file can be opened in one of the two modes, read mode or **write mode**. In read mode, the operating system does not allow anyone to alter data. In other words, data is read only. Files opened in read mode can be shared among several entities. Write mode allows data modification. Files opened in write mode can be read but cannot be shared.
 
-Locate − Every file has a file pointer, which tells the current position where the data is to be read or written. This pointer can be adjusted accordingly. Using find (seek) operation, it can be moved forward or backward.
+**Locate** − Every file has a file pointer, which tells the current position where the data is to be read or written. This pointer can be adjusted accordingly. Using find (seek) operation, it can be moved forward or backward.
 
-Read − By default, when files are opened in read mode, the file pointer points to the beginning of the file. There are options where the user can tell the operating system where to locate the file pointer at the time of opening a file. The very next data to the file pointer is read.
+**Read** − By default, when files are opened in read mode, the file pointer points to the beginning of the file. There are options where the user can tell the operating system where to locate the file pointer at the time of opening a file. The very next data to the file pointer is read.
 
-Write − User can select to open a file in write mode, which enables them to edit its contents. It can be deletion, insertion, or modification. The file pointer can be located at the time of opening or can be dynamically changed if the operating system allows to do so.
+**Write** − User can select to open a file in write mode, which enables them to edit its contents. It can be deletion, insertion, or modification. The file pointer can be located at the time of opening or can be dynamically changed if the operating system allows to do so.
 
-Close − This is the most important operation from the operating system’s point of view. When a request to close a file is generated, the operating system
+**Close** − This is the most important operation from the operating system’s point of view. When a request to close a file is generated, the operating system
 
-removes all the locks (if in shared mode),
-saves the data (if altered) to the secondary storage media, and
-releases all the buffers and file handlers associated with the file.
+**removes all the locks (if in shared mode),**
+**saves the data (if altered) to the secondary storage media,**
+**andreleases all the buffers and file handlers associated with the file.**
 The organization of data inside a file plays a major role here. The process to locate the file pointer to a desired record inside a file various based on whether the records are arranged sequentially or clustered.

@@ -1,14 +1,18 @@
 We understand the benefits of taking a Cartesian product of two relations, which gives us all the possible tuples that are paired together. But it might not be feasible for us in certain cases to take a Cartesian product where we encounter huge relations with thousands of tuples having a considerable large number of attributes.
 
-Join is a combination of a Cartesian product followed by a selection process. A Join operation pairs two tuples from different relations, if and only if a given join condition is satisfied.
+- Join is a combination of a Cartesian product followed by a selection process. A Join operation pairs two tuples from different relations, if and only if a given join condition is satisfied.
 
 We will briefly describe various join types in the following sections.
 
-Theta (θ) Join
+## Theta (θ) Join
+
 Theta join combines tuples from different relations provided they satisfy the theta condition. The join condition is denoted by the symbol θ.
 
-Notation
+### Notation
+```
 R1 ⋈θ R2
+```
+
 R1 and R2 are relations having attributes (A1, A2, .., An) and (B1, B2,.. ,Bn) such that the attributes don’t have anything in common, that is R1 ∩ R2 = Φ.
 
 Theta join can use all kinds of comparison operators.
@@ -30,7 +34,9 @@ Theta join can use all kinds of comparison operators.
 | 11	|Sports|
 Student_Detail −
 
+```
 STUDENT ⋈Student.Std = Subject.Class SUBJECT
+```
 
 |Student_detail|
 |--------|
@@ -41,10 +47,12 @@ STUDENT ⋈Student.Std = Subject.Class SUBJECT
 | 102	| Maria	| 11	| 11	 |Music|
 | 102	| Maria	| 11	| 11	 |Sports|
 
-Equijoin
+## Equijoin
+
 When Theta join uses only equality comparison operator, it is said to be equijoin. The above example corresponds to equijoin.
 
-Natural Join (⋈)
+## Natural Join (⋈)
+
 Natural join does not use any comparison operator. It does not concatenate the way a Cartesian product does. We can perform a Natural Join only if there is at least one common attribute that exists between two relations. In addition, the attributes must have the same name and domain.
 
 Natural join acts on those matching attributes where the values of attributes in both the relations are same.
@@ -71,10 +79,12 @@ Natural join acts on those matching attributes where the values of attributes in
 | ME            | ME01 | Mechanics   | Maya |
 | EE            | EE01 | Electronics | Mira |
 
-Outer Joins
+## Outer Joins
+
 Theta Join, Equijoin, and Natural Join are called inner joins. An inner join includes only those tuples with matching attributes and the rest are discarded in the resulting relation. Therefore, we need to use outer joins to include all the tuples from the participating relations in the resulting relation. There are three kinds of outer joins − left outer join, right outer join, and full outer join.
 
-Left Outer Join(R Left Outer Join S)
+## Left Outer Join(R Left Outer Join S)
+
 All the tuples from the Left relation, R, are included in the resulting relation. If there are tuples in R without any matching tuple in the Right relation S, then the S-attributes of the resulting relation are made NULL.
 
 | Left |
@@ -98,7 +108,9 @@ All the tuples from the Left relation, R, are included in the resulting relation
 | 101          | Mechanics   | \-\-\- | \-\-\- |
 | 102          | Electronics | 102    | Maya   |
 
-Right Outer Join: ( R Right Outer Join S )
+## Right Outer Join: ( R Right Outer Join S )
+
+
 All the tuples from the Right relation, S, are included in the resulting relation. If there are tuples in S without any matching tuple in R, then the R-attributes of resulting relation are made NULL.
 
 | Courses  HoD |
@@ -108,7 +120,8 @@ All the tuples from the Right relation, S, are included in the resulting relatio
 | 102          | Electronics | 102 | Maya |
 | \-\-\-       | \-\-\-      | 104 | Mira |
 
-Full Outer Join: ( R Full Outer Join S)
+## Full Outer Join: ( R Full Outer Join S)
+
 All the tuples from both participating relations are included in the resulting relation. If there are no matching tuples for both relations, their respective unmatched attributes are made NULL.
 
 | Courses  HoD |
