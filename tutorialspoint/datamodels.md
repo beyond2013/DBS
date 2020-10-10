@@ -1,8 +1,13 @@
+**Credit: **
+Contents presented here have been taken from [tutorialspoint DBMS tutorial](https://www.tutorialspoint.com/dbms/dbms_data_models.htm)
+
+# Data Models
+
 Data models define how the logical structure of a database is modeled. Data Models are fundamental entities to introduce abstraction in a DBMS. Data models define how data is connected to each other and how they are processed and stored inside the system.
 
 The very first data model could be flat data-models, where all the data used are to be kept in the same plane. Earlier data models were not so scientific, hence they were prone to introduce lots of duplication and update anomalies.
 
-# Entity-Relationship Model
+## Entity-Relationship Model
 Entity-Relationship (ER) Model is based on the notion of real-world entities and relationships among them. While formulating real-world scenario into the database model, the ER Model creates entity set, relationship set, general attributes and constraints.
 
 ![ER Model](fig/er_model_intro.png)
@@ -28,7 +33,8 @@ Mapping cardinalities −
 - one to many
 - many to one
 - many to many
-# Relational Model
+
+## Relational Model
 The most popular data model in DBMS is the Relational Model. It is more scientific a model than others. This model is based on first-order predicate logic and defines a table as an **n-ary relations**.
 
 ![Relational Model Table](fig/relational_model_table.png)

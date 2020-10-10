@@ -1,3 +1,6 @@
+**Credit: **
+Contents presented here have been taken from [tutorialspoint DBMS tutorial](https://www.tutorialspoint.com/dbms/dbms_data_independence.htm)
+
 If a database system is not multi-layered, then it becomes difficult to make any changes in the database system. Database systems are designed in multi-layers as we learnt earlier.
 
 # Data Independence

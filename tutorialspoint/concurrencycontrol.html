@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>concurrencycontrol</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="concurrency-control">Concurrency Control</h1>
+<p>In a multiprogramming environment where multiple transactions can be executed simultaneously, it is highly important to control the concurrency of transactions. We have concurrency control protocols to ensure atomicity, isolation, and serializability of concurrent transactions. Concurrency control protocols can be broadly divided into two categories:</p>
+<ol type="1">
+<li>Lock based protocols</li>
+<li>Time stamp based protocols</li>
+</ol>
+<h2 id="lock-based-protocols">Lock-based Protocols</h2>
+<p>Database systems equipped with lock-based protocols use a mechanism by which any transaction cannot read or write data until it acquires an appropriate lock on it. Locks are of two kinds −</p>
+<p><strong>Binary Locks</strong>: A lock on a data item can be in two states; it is either locked or unlocked.</p>
+<p><strong>Shared/exclusive </strong>: This type of locking mechanism differentiates the locks based on their uses. If a lock is acquired on a data item to perform a write operation, it is an exclusive lock. Allowing more than one transaction to write on the same data item would lead the database into an inconsistent state. Read locks are shared because no data value is being changed.</p>
+<p>There are four types of lock protocols available −</p>
+<h2 id="simplistic-lock-protocol">Simplistic Lock Protocol</h2>
+<p>Simplistic lock-based protocols allow transactions to obtain a lock on every object before a ‘write’ operation is performed. Transactions may unlock the data item after completing the ‘write’ operation.</p>
+<h2 id="pre-claiming-lock-protocol">Pre-claiming Lock Protocol</h2>
+<figure>
+<img src="fig/pre_claiming.png" style="width:50.0%" alt="" /><figcaption>Pre-claiming</figcaption>
+</figure>
+<p>Pre-claiming protocols evaluate their operations and create a list of data items on which they need locks. Before initiating an execution, the transaction requests the system for all the locks it needs beforehand. If all the locks are granted, the transaction executes and releases all the locks when all its operations are over. If all the locks are not granted, the transaction rolls back and waits until all the locks are granted.</p>
+<h2 id="two-phase-locking-2pl">Two-Phase Locking 2PL</h2>
+<p>This locking protocol divides the execution phase of a transaction into three parts. In the first part, when the transaction starts executing, it seeks permission for the locks it requires. The second part is where the transaction acquires all the locks. As soon as the transaction releases its first lock, the third phase starts. In this phase, the transaction cannot demand any new locks; it only releases the acquired locks.</p>
+<figure>
+<img src="fig/strict_2PL.png" style="width:50.0%" alt="" /><figcaption>Two Phase Locking</figcaption>
+</figure>
+<p>Two-phase locking has two phases, one is growing, where all the locks are being acquired by the transaction; and the second phase is shrinking, where the locks held by the transaction are being released.</p>
+<p>To claim an exclusive (write) lock, a transaction must first acquire a shared (read) lock and then upgrade it to an exclusive lock.</p>
+<h2 id="strict-two-phase-locking">Strict Two-Phase Locking</h2>
+<p>The first phase of Strict-2PL is same as 2PL. After acquiring all the locks in the first phase, the transaction continues to execute normally. But in contrast to 2PL, Strict-2PL does not release a lock after using it. Strict-2PL holds all the locks until the commit point and releases all the locks at a time.</p>
+<figure>
+<img src="fig/strict_2PL.png" style="width:50.0%" alt="" /><figcaption>Strict Two Phase Locking</figcaption>
+</figure>
+<p>Strict-2PL does not have cascading abort as 2PL does.</p>
+<h2 id="timestamp-based-protocols">Timestamp-based Protocols</h2>
+<p>The most commonly used concurrency protocol is the timestamp based protocol. This protocol uses either system time or logical counter as a timestamp.</p>
+<p>Lock-based protocols manage the order between the conflicting pairs among transactions at the time of execution, whereas timestamp-based protocols start working as soon as a transaction is created.</p>
+<p>Every transaction has a timestamp associated with it, and the ordering is determined by the age of the transaction. A transaction created at 0002 clock time would be older than all other transactions that come after it. For example, any transaction ‘y’ entering the system at 0004 is two seconds younger and the priority would be given to the older one.</p>
+<p>In addition, every data item is given the latest read and write-timestamp. This lets the system know when the last ‘read and write’ operation was performed on the data item.</p>
+<h2 id="timestamp-ordering-protocol">Timestamp Ordering Protocol</h2>
+<p>The timestamp-ordering protocol ensures serializability among transactions in their conflicting read and write operations. This is the responsibility of the protocol system that the conflicting pair of tasks should be executed according to the timestamp values of the transactions.</p>
+<ul>
+<li>The timestamp of transaction Ti is denoted as TS(Ti).</li>
+<li>Read time-stamp of data-item X is denoted by R-timestamp(X).</li>
+<li>Write time-stamp of data-item X is denoted by W-timestamp(X).</li>
+</ul>
+<p>Timestamp ordering protocol works as follows:</p>
+<p><strong>If a transaction Ti issues a read(X) operation</strong>:</p>
+<ul>
+<li>If TS(Ti) &lt; W-timestamp(X)</li>
+<li>Operation rejected.</li>
+<li>If TS(Ti) &gt;= W-timestamp(X)</li>
+<li>Operation executed.</li>
+<li>All data-item timestamps updated.</li>
+</ul>
+<p><strong>If a transaction Ti issues a write(X) operation</strong>:</p>
+<ul>
+<li>If TS(Ti) &lt; R-timestamp(X)</li>
+<li>Operation rejected.</li>
+<li>If TS(Ti) &lt; W-timestamp(X)</li>
+<li>Operation rejected and Ti rolled back.</li>
+<li>Otherwise, operation executed.</li>
+</ul>
+<h2 id="thomas-write-rule">Thomas’ Write Rule</h2>
+<p>This rule states if TS(Ti) &lt; W-timestamp(X), then the operation is rejected and Ti is rolled back.</p>
+<p>Time-stamp ordering rules can be modified to make the schedule view serializable.</p>
+<p>Instead of making Ti rolled back, the ‘write’ operation itself is ignored.</p>
+</body>
+</html>

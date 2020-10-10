@@ -1,17 +1,19 @@
-In a multiprogramming environment where multiple transactions can be executed simultaneously, it is highly important to control the concurrency of transactions. We have concurrency control protocols to ensure atomicity, isolation, and serializability of concurrent transactions. Concurrency control protocols can be broadly divided into two categories −
- ** Lock based protocols**
+# Concurrency Control
 
- ** Time stamp based protocols**
+In a multiprogramming environment where multiple transactions can be executed simultaneously, it is highly important to control the concurrency of transactions. We have concurrency control protocols to ensure atomicity, isolation, and serializability of concurrent transactions. Concurrency control protocols can be broadly divided into two categories:
+
+ 1. Lock based protocols
+ 2. Time stamp based protocols
 
 ## Lock-based Protocols 
 
-Database systems equipped with lock-based protocols use a mechanism by which any transaction cannot read or write data until it acquires an appropriate lock on it. Locks are of two kinds −
+Database systems equipped with lock-based protocols use a mechanism by which any transaction cannot read or write data until it acquires an appropriate lock on it. Locks are of two kinds:
 
- **Binary Locks** − A lock on a data item can be in two states; it is either locked or unlocked.
+ **Binary Locks**: A lock on a data item can be in two states; it is either locked or unlocked.
 
- **Shared/exclusive **− This type of locking mechanism differentiates the locks based on their uses. If a lock is acquired on a data item to perform a write operation, it is an exclusive lock. Allowing more than one transaction to write on the same data item would lead the database into an inconsistent state. Read locks are shared because no data value is being changed.
+ **Shared/exclusive **: This type of locking mechanism differentiates the locks based on their uses. If a lock is acquired on a data item to perform a write operation, it is an exclusive lock. Allowing more than one transaction to write on the same data item would lead the database into an inconsistent state. Read locks are shared because no data value is being changed.
 
-There are four types of lock protocols available −
+There are four types of lock protocols available:
 
 ## Simplistic Lock Protocol
 
@@ -19,15 +21,16 @@ Simplistic lock-based protocols allow transactions to obtain a lock on every obj
 
 ## Pre-claiming Lock Protocol
 
+![Pre-claiming](fig/pre_claiming.png){ width=50% }
+
 Pre-claiming protocols evaluate their operations and create a list of data items on which they need locks. Before initiating an execution, the transaction requests the system for all the locks it needs beforehand. If all the locks are granted, the transaction executes and releases all the locks when all its operations are over. If all the locks are not granted, the transaction rolls back and waits until all the locks are granted.
 
-![Pre-claiming](fig/pre_claiming.png)
 
 ## Two-Phase Locking 2PL
 
 This locking protocol divides the execution phase of a transaction into three parts. In the first part, when the transaction starts executing, it seeks permission for the locks it requires. The second part is where the transaction acquires all the locks. As soon as the transaction releases its first lock, the third phase starts. In this phase, the transaction cannot demand any new locks; it only releases the acquired locks.
 
-![Two Phase Locking](fig/strict_2PL.png)
+![Two Phase Locking](fig/strict_2PL.png){ width=50% }
 
 Two-phase locking has two phases, one is growing, where all the locks are being acquired by the transaction; and the second phase is shrinking, where the locks held by the transaction are being released.
 
@@ -37,7 +40,7 @@ To claim an exclusive (write) lock, a transaction must first acquire a shared (r
 
 The first phase of Strict-2PL is same as 2PL. After acquiring all the locks in the first phase, the transaction continues to execute normally. But in contrast to 2PL, Strict-2PL does not release a lock after using it. Strict-2PL holds all the locks until the commit point and releases all the locks at a time.
 
-![Strict Two Phase Locking](fig/strict_2PL.png)
+![Strict Two Phase Locking](fig/strict_2PL.png){ width=50% }
 
 Strict-2PL does not have cascading abort as 2PL does.
 
@@ -58,9 +61,10 @@ The timestamp-ordering protocol ensures serializability among transactions in th
 - The timestamp of transaction Ti is denoted as TS(Ti).
 - Read time-stamp of data-item X is denoted by R-timestamp(X).
 - Write time-stamp of data-item X is denoted by W-timestamp(X).
-Timestamp ordering protocol works as follows −
 
- **If a transaction Ti issues a read(X) operation** −
+Timestamp ordering protocol works as follows:
+
+ **If a transaction Ti issues a read(X) operation**:
 
 - If TS(Ti) < W-timestamp(X)
 + Operation rejected.
@@ -68,7 +72,7 @@ Timestamp ordering protocol works as follows −
 + Operation executed.
 - All data-item timestamps updated.
 
- **If a transaction Ti issues a write(X) operation** −
+ **If a transaction Ti issues a write(X) operation**: 
 
 - If TS(Ti) < R-timestamp(X)
 + Operation rejected.

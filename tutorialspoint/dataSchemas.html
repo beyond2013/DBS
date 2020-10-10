@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>dataSchemas</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p><strong>Credit: </strong> Contents presented here have been taken from <a href="https://www.tutorialspoint.com/dbms/dbms_data_models.htm">tutorialspoint DBMS tutorial</a></p>
+<h1 id="database-schema">Database Schema</h1>
+<p>A database schema is the skeleton structure that represents the logical view of the entire database. It defines how the data is organized and how the relations among them are associated. It formulates all the constraints that are to be applied on the data.</p>
+<p>A database schema defines its entities and the relationship among them. It contains a descriptive detail of the database, which can be depicted by means of schema diagrams. It’s the database designers who design the schema to help programmers understand the database and make it useful.</p>
+<figure>
+<img src="fig/dbms_schemas.png" alt="" /><figcaption>Database Schema</figcaption>
+</figure>
+<p>A database schema can be divided broadly into two categories −</p>
+<ul>
+<li><p><strong>Physical Database Schema</strong> − This schema pertains to the actual storage of data and its form of storage like files, indices, etc. It defines how the data will be stored in a secondary storage.</p></li>
+<li><p><strong>Logical Database Schema</strong> − This schema defines all the logical constraints that need to be applied on the data stored. It defines tables, views, and integrity constraints.</p></li>
+</ul>
+<h1 id="database-instance">Database Instance</h1>
+<p>It is important that we distinguish these two terms individually. Database schema is the skeleton of database. It is designed when the database doesn’t exist at all. Once the database is operational, it is very difficult to make any changes to it. A database schema does not contain any data or information.</p>
+<p>A database instance is a state of operational database with data at any given time. It contains a snapshot of the database. Database instances tend to change with time. A DBMS ensures that its every instance (state) is in a valid state, by diligently following all the validations, constraints, and conditions that the database designers have imposed.</p>
+</body>
+</html>
