@@ -1,4 +1,4 @@
-We often need to provide information stored in different columns. To do that database systems provide the join functionality.
+We often need to provide information stored in different columns of different tables. To do that database systems provide the join functionality.
 
 Joins are of different types e.g. Inner Join or Equi Join, Right Join, Left Join.
 
