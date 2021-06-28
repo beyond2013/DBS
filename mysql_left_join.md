@@ -1,3 +1,4 @@
+
 teacher
 
 ```
@@ -32,6 +33,25 @@ course_teacher
 +----+-----------+------------+
 ```
 
+
+SQL queries for creating required tables
+
+```sql
+
+create database SIS;
+use SIS;
+
+create table teacher ( id int not null primary key, name varchar(20), email varchar(20));
+
+
+create table course (id int not null primary key, title varchar(20), code varchar(10));
+
+
+
+create table course_teacher (id int not null primary key, course_id int, teacher_id int, foreign
+key(course_id) references course(id), foreign key(teacher_id) references teacher(id));
+
+```
 To see who is teaching what, a left join between teacher and course_teacher
 
 ```sql
