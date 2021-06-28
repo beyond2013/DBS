@@ -1,10 +1,7 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-CS713*
-Midterm*
-*.docx
-*.odt
-*.txt
-zoom-sessions/
+/*
+!.gitignore
+!README.md
+!markdown/
+!figures/
+!pastpapers/
+
