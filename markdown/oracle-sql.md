@@ -1,11 +1,17 @@
+- First create teacher table
+
 ```sql
 create table teacher
 (
   id number(6),
 	firstName varchar(20),
-	constraint pk_column primary key(id)
+	constraint pk_column_t primary key(id)
 );
+```
 
+- Now insert values into teacher table
+
+```sql
 insert into teacher
 values(1, 'imran');
 
@@ -14,15 +20,22 @@ values(2, 'Junaid');
 
 insert into teacher
 values(3, 'Basit');
+```
 
+- create course table
 
+```sql
 create table course
 (
   id number(6),
 	title varchar(20),
-	constraint pk_column primary key(id)
+	constraint pk_column_c primary key(id)
 );
+```
 
+- Now insert values into course table
+
+```sql
 insert into course
 values(1, 'Operating Systems');
 
@@ -31,8 +44,12 @@ values(2, 'Database Systems');
 
 insert into course
 values(3, 'Fundamentals of Programming');
+```
 
-create table teacher_course
+- Create Course_Teacher table to store relationship
+
+```sql
+create table course_teacher
 (
  tid number(6),
  cid number(6),
@@ -43,8 +60,11 @@ create table teacher_course
  foreign key(cid)
  references course(id)
 );
+```
 
+- insert values in course_teacher
 
+```sql
 insert into course_teacher
 values(2,1);
 
@@ -53,8 +73,12 @@ values(2,2);
 
 insert into course_teacher
 values(2,3);
+```
 
 
+- Finally write inner join query
+
+```sql
 select course.title
 from course
 inner join course_teacher
