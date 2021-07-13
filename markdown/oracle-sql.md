@@ -1,3 +1,4 @@
+```sql
 create table teacher
 (
   id number(6),
@@ -58,4 +59,4 @@ select course.title
 from course
 inner join course_teacher
 on course.id = course_teacher.cid;
-
+```
