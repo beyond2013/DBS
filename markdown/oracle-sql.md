@@ -84,3 +84,5 @@ from course
 inner join course_teacher
 on course.id = course_teacher.cid;
 ```
+
+- The output of the join query will return matching rows from course and course_teacher table
