@@ -95,14 +95,14 @@ if the underlying database is changed.
 Above mentioned functionalities of DBMS differ from product to product.
 
 ## Components of the DBMS Environment
-![](./figures/components.png)
+![](../figures/components.png)
 
 
 ### Hardware
 The DBMS and the applications require hardware to run. The hardware can range
 from a **single personal computer** to a **single mainframe** or a **network of computers**.
 
-![](./figures/components2.png)
+![](../figures/components2.png)
 
 A simplified hardware configuration for a DBMS is illustrated in figure above. It consists of
 a network of small servers, with a central server located in London running the

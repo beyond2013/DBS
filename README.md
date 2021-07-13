@@ -30,6 +30,8 @@ Assignments: 15 marks
 4. https://classroom.udacity.com/courses/ud197 
 5. https://www.udacity.com/course/database-systems-concepts-design--ud150
 6. [Database Design for beginners by David Copeland](https://youtu.be/1VsSXRPEBo0)
+7. [How to setup world database in mysql](https://dev.mysql.com/doc/world-setup/en/world-setup-installation.html)
+
 ## MySQL install guide
 
 [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)
