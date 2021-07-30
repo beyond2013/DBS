@@ -27,11 +27,12 @@ Assignments: 15 marks
 1. https://www.mysql.com/  
 2. http://www.sqlfiddle.com/  
 3. https://www.w3schools.com/sql/  
-4. https://classroom.udacity.com/courses/ud197 
-5. https://www.udacity.com/course/database-systems-concepts-design--ud150
-6. [Database Design for beginners by David Copeland](https://youtu.be/1VsSXRPEBo0)
-7. [How to setup world database in mysql](https://dev.mysql.com/doc/world-setup/en/world-setup-installation.html)
-8. [online oracle pl sql](https://livesql.oracle.com/)
+4. https://www.w3schools.com/mysql
+5. https://classroom.udacity.com/courses/ud197 
+6. https://www.udacity.com/course/database-systems-concepts-design--ud150
+7. [Database Design for beginners by David Copeland](https://youtu.be/1VsSXRPEBo0)
+8. [How to setup world database in mysql](https://dev.mysql.com/doc/world-setup/en/world-setup-installation.html)
+9. [online oracle pl sql](https://livesql.oracle.com/)
 
 ## MySQL install guide
 
