@@ -4,6 +4,8 @@ show tables;
 
 select * from city;
 
+select * from city limit 5 offset 10;
+
 select name, population from city;
 
 select name, population 
@@ -58,6 +60,19 @@ FROM
         INNER JOIN
     country ON city.CountryCode = country.code;
 
+
+SELECT 
+    name, population
+FROM
+    city
+WHERE
+    population > (SELECT 
+            population
+        FROM
+            city
+        WHERE
+            name = 'Peshawar')
+		AND countrycode='PAK';
 
 SELECT 
     ID,
