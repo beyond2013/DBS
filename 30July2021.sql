@@ -51,3 +51,26 @@ where id=2830;
 
 select name , min(population) from city;
 
+SELECT 
+    city.name, country.name
+FROM
+    city
+        INNER JOIN
+    country ON city.CountryCode = country.code;
+
+
+SELECT 
+    ID,
+    Name,
+    CASE
+        WHEN name = 'Islamabad' THEN 'Capital of the Country'
+        WHEN name = 'Karachi' THEN 'Capital of Sindh Province'
+        WHEN name = 'Lahore' THEN 'Capital of Panjab Province'
+        WHEN name = 'Peshawar' THEN 'Capital of KPK Province'
+        WHEN name = 'Quetta' THEN 'Capital of Quetta Province'
+        ELSE 'Not a capital city'
+    END AS CityStatus
+FROM
+    city
+WHERE
+    CountryCode = 'PAK';
