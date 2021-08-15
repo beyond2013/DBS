@@ -6,12 +6,12 @@ Course Logistics for Database Systems
 ## Prerequisites: None
 
 ## Course Content:
-- Basic database concepts
-- Database approach vs file based system
-- database architecture
-- three level schema architecture
-- data independence
-- relational data model
+- [Basic database concepts](markdown/introduction.md)
+- [Database approach vs file based system](markdown/introduction.md)
+- Database architecture
+- Three level schema architecture
+- Data independence
+- [relational data model](intro2RelationalDatabases.md)
   + attributes
   + schemas
   + tuples
@@ -24,7 +24,10 @@ Course Logistics for Database Systems
      - Projection
      - Cartesian product
 - Types of joins
-- Normalization
+  + [inner join](mysql_inner_join.md)
+  + [left join](mysql_left_join.md)
+  + [right join](mysql_right_join.md)
+- [Normalization](markdown/database-normalization.md)
   + functional dependencies
   + normal forms
 - Entity relationship model
