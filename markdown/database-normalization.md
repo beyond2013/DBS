@@ -70,9 +70,9 @@ Let's move into second normal form 2NF
 
 It is clear that we can't move forward to make our simple database in 2nd Normalization form unless we partition the table above.
 
-![Table 1](./figures/Table1.png)
+![Table 1](../figures/Table1.png)
 
-![Table 2](./figures/Table2.png)
+![Table 2](../figures/Table2.png)
 
 We have divided our 1NF table into two tables viz. Table 1 and Table2. Table 1 contains member information. Table 2 contains information on movies rented.
 
