@@ -20,13 +20,13 @@ Here is a list of Normal Forms
 
 The Theory of Data Normalization in SQL is still being developed further. For example, there are discussions even on 6th Normal Form. However, in most practical applications, normalization achieves its best in 3rd Normal Form. The evolution of Normalization theories is illustrated below-
 
-![Evolution of Normalization theories](./figures/normalization-Evolution.png)
+![Evolution of Normalization theories](../figures/normalization-Evolution.png)
 
 ## Database Normalization With Examples
 Database Normalization Example can be easily understood with the help of a case study. Assume, a video library maintains a database of movies rented out. Without any normalization, all information is stored in one table as shown below.
 
 
-![Evolution of Normalization theories](./figures/NormalizationTable1.png)
+![Evolution of Normalization theories](../figures/NormalizationTable1.png)
 
 Here you see Movies Rented column has multiple values. Now let's move into 1st Normal Forms:
 
@@ -34,7 +34,7 @@ Here you see Movies Rented column has multiple values. Now let's move into 1st N
 - Each table cell should contain a single value.
 - Each record needs to be unique.
 
-![The above table in 1NF](./figures/1NF.png)
+![The above table in 1NF](../figures/1NF.png)
 
 Before we proceed let's understand a few things 
 
@@ -58,7 +58,7 @@ A composite key is a primary key composed of multiple columns used to identify a
 
 In our database, we have two people with the same name Robert Phil, but they live in different places.
 
-![Composite Key](./figures/CompositeKey.png)
+![Composite Key](../figures/CompositeKey.png)
 
 Hence, we require both Full Name and Address to identify a record uniquely. That is a composite key.
 
@@ -88,12 +88,12 @@ In Table 2, **Membership_ID** is the Foreign Key
 - Unlike the Primary key, they do not have to be unique. Most often they aren't
 - Foreign keys can be null even though primary keys can not 
 
-![Foreign Key Relation with Primary Key](./figures/ForeignKeyRelationWithPrimary.png)
+![Foreign Key Relation with Primary Key](../figures/ForeignKeyRelationWithPrimary.png)
 
 ## Why do you need a foreign key?
 Suppose, a novice inserts a record in Table B such as
 
-![Referential Integrity 1](./figures/ReferentialIntegrity-1.png)
+![Referential Integrity 1](../figures/ReferentialIntegrity-1.png)
 
 You will only be able to insert values into your foreign key that exist in the unique key in the parent table. This helps in referential integrity. 
 
@@ -106,7 +106,7 @@ A transitive functional dependency is when changing a non-key column, might caus
 
 Consider the table 1. Changing the non-key column Full Name may change Salutation.
 
-![Transitive Functional Dependency](./figures/tfd.png)
+![Transitive Functional Dependency](../figures/tfd.png)
 
 Let's move into 3NF
 
@@ -117,11 +117,11 @@ Let's move into 3NF
 To move our 2NF table into 3NF, we again need to divide our table.
 
 ### 3NF Example
-![TABLE 1](./figures/3NFTable1.png)
+![TABLE 1](../figures/3NFTable1.png)
 
-![TABLE 2](./figures/3NFTable2.png)
+![TABLE 2](../figures/3NFTable2.png)
 
-![TABLE 3](./figures/3NFTable3.png)
+![TABLE 3](../figures/3NFTable3.png)
 
 
 
