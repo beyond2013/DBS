@@ -6,7 +6,39 @@ Course Logistics for Database Systems
 ## Prerequisites: None
 
 ## Course Content:
-Basic database concepts, Database approach vs file based system, database architecture, three level schema architecture, data independence, relational data model, attributes, schemas, tuples, domains, relation instances, keys of relations, integrity constraints, relational algebra, selection, projection, Cartesian product, types of joins, normalization, functional dependencies, normal forms, entity relationship model, entity sets, attributes, relationship, entity-relationship diagrams, Structured Query Language (SQL), Joins and sub-queries in SQL, Grouping and aggregation in SQL, concurrency control, database backup and recovery, indexes, NoSQL systems.
+- Basic database concepts
+- Database approach vs file based system
+- database architecture
+- three level schema architecture
+- data independence
+- relational data model
+  + attributes
+  + schemas
+  + tuples
+  + domains
+  + relation instances
+  + keys of relations
+  + integrity constraints
+  + relational algebra
+     - Selection
+     - Projection
+     - Cartesian product
+- Types of joins
+- Normalization
+  + functional dependencies
+  + normal forms
+- Entity relationship model
+  + entity sets
+  + attributes
+  + relationship
+  + entity-relationship diagrams
+- Structured Query Language (SQL)
+  + Joins and sub-queries in SQL
+  + Grouping and aggregation in SQL
+- Concurrency control
+- Database backup and recovery
+- Indexes
+- NoSQL systems.
 
 ## Course Assessment:  
 
