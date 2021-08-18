@@ -37,7 +37,7 @@ Course Logistics for Database Systems
   + Joins and sub-queries in SQL
   + Grouping and aggregation in SQL
 - [Concurrency control](markdown/concurrency.md)
-- [Database backup and recovery](backup.md)
+- [Database backup and recovery](markdown/backup.md)
 - [Indexes](markdown/indexing.md)
 - [NoSQL systems](markdown/nosql.md)
 
