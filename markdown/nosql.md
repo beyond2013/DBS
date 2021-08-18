@@ -1,3 +1,5 @@
+**Credits: Contents presented here have been taken from [w3schools.in](https://www.w3schools.in/definition/what-is-nosql/)**
+
 # NoSQL Systems
 
 Databases can be considered as one of the important component entity for technology and applications. Data need to be stored in a specific structure and format to retrieve it whenever required. But, there are situations where data are not always in a structured format, i.e., their schemas are not rigid. In this chapter, you will learn in details about NoSQL and its characteristic features.
