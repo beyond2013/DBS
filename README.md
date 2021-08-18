@@ -39,7 +39,7 @@ Course Logistics for Database Systems
 - Concurrency control
 - Database backup and recovery
 - Indexes
-- NoSQL systems.
+- [NoSQL systems](markdown/nosql.md)
 
 ## Course Assessment:  
 
