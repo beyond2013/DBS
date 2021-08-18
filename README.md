@@ -8,9 +8,7 @@ Course Logistics for Database Systems
 ## Course Content:
 - [Basic database concepts](markdown/introduction.md)
 - [Database approach vs file based system](markdown/introduction.md)
-- Database architecture
 - [Three level schema architecture](markdown/ThreeSchemaArchitecture.md)
-- Data independence
 - [relational data model](intro2RelationalDatabases.md)
   + attributes
   + schemas
