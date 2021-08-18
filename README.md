@@ -30,7 +30,7 @@ Course Logistics for Database Systems
 - [Normalization](markdown/database-normalization.md)
   + functional dependencies
   + normal forms
-- Entity relationship model
+- [Entity relationship model](tutorialspoint/ERModel.md)
   + entity sets
   + attributes
   + relationship
