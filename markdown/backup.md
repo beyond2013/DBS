@@ -27,4 +27,5 @@ Transaction Log -  Only the transaction logs are saved as the backup in this met
 There are two methods that are primarily used for database recovery. These are:
 
 **Log based recovery:**  In log based recovery, logs of all database transactions are stored in a secure area so that in case of a system failure, the database can recover the data. All log information, such as the time of the transaction, its data etc. should be stored before the transaction is executed.
+
 **Shadow paging:**  In shadow paging, after the transaction is completed its data is automatically stored for safekeeping. So, if the system crashes in the middle of a transaction, changes made by it will not be reflected in the database.
