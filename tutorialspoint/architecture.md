@@ -12,7 +12,7 @@ If the architecture of DBMS is 2-tier, then it must have an application through 
 # 3-tier Architecture
 A 3-tier architecture separates its tiers from each other based on the complexity of the users and how they use the data present in the database. It is the most widely used architecture to design a DBMS.
 
-![Three tier Architecture](fig/dbms_architecture.png){ width=50% }
+![Three tier Architecture](fig/dbms_architecture.png)
 
 - **Database (Data) Tier** − At this tier, the database resides along with its query processing languages. We also have the relations that define the data and their constraints at this level.
 

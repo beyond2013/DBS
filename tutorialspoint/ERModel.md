@@ -1,4 +1,4 @@
-**Credit: **
+**Credit:**
 Contents presented here have been taken from [tutorialspoint DBMS tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
 
 # ER Model Basic Concepts
