@@ -37,3 +37,8 @@ At the external level, a database contains several schemas that sometimes called
 An external schema is also known as view schema.
 Each view schema describes the database part that a particular user group is interested and hides the remaining database from that user group.
 The view schema describes the end user interaction with database systems.
+
+## The concept of data independence
+As the database may be viewed through three levels of abstraction, any change at any level can affect other levels' schemas. Since the database keeps on growing, then there may be frequent changes at times. This should not lead to redesigning and re-implementation of the database. The concepts of data independence prove beneficial in such types of contexts.
+- Physical data independence
+- Logical data independence
