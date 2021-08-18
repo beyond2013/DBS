@@ -33,7 +33,7 @@ Course Logistics for Database Systems
   + attributes
   + relationship
   + entity-relationship diagrams
-- Structured Query Language (SQL)
+- [Structured Query Language (SQL)](30July2021.sql)
   + Joins and sub-queries in SQL
   + Grouping and aggregation in SQL
 - Concurrency control
@@ -43,10 +43,10 @@ Course Logistics for Database Systems
 
 ## Course Assessment:  
 
-Mid term exam: 30 marks
-Terminal exam: 40 marks
-Quizes: 15 marks
-Assignments: 15 marks
+Mid term exam: 30 marks  
+Terminal exam: 40 marks  
+Quizes: 15 marks  
+Assignments: 15 marks  
 
 ## Reference Materials:
 
