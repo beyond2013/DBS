@@ -38,7 +38,7 @@ Course Logistics for Database Systems
   + Grouping and aggregation in SQL
 - Concurrency control
 - Database backup and recovery
-- Indexes
+- [Indexes](markdown/indexing.md)
 - [NoSQL systems](markdown/nosql.md)
 
 ## Course Assessment:  
