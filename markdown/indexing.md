@@ -7,11 +7,11 @@ We know that data is stored in the form of records. Every record has a key field
 
 Indexing is defined based on its indexing attributes. Indexing can be of the following types −
 
-**Primary Index** − Primary index is defined on an ordered data file. The data file is ordered on a **key field**. The key field is generally the primary key of the relation.
+**Primary Index:**  Primary index is defined on an ordered data file. The data file is ordered on a **key field**. The key field is generally the primary key of the relation.
 
-**Secondary Index** − Secondary index may be generated from a field which is a candidate key and has a unique value in every record, or a non-key with duplicate values.
+**Secondary Index:**  Secondary index may be generated from a field which is a candidate key and has a unique value in every record, or a non-key with duplicate values.
 
-**Clustering Index **− Clustering index is defined on an ordered data file. The data file is ordered on a non-key field.
+**Clustering Index:**  Clustering index is defined on an ordered data file. The data file is ordered on a non-key field.
 
 Ordered Indexing is of two types
 
@@ -22,19 +22,19 @@ Ordered Indexing is of two types
 
 In dense index, there is an index record for every search key value in the database. This makes searching faster but requires more space to store index records itself. Index records contain search key value and a pointer to the actual record on the disk.
 
-![Dense Index](fig/dense_index.png)
+![Dense Index](../figures/dense_index.png)
 
 ## Sparse Index
 
 In sparse index, index records are not created for every search key. An index record here contains a search key and an actual pointer to the data on the disk. To search a record, we first proceed by index record and reach at the actual location of the data. If the data we are looking for is not where we directly reach by following the index, then the system starts sequential search until the desired data is found.
 
-![Sparse Index](fig/sparse_index.png)
+![Sparse Index](../figures/sparse_index.png)
 
 ## Multilevel Index
 
 Index records comprise search-key values and data pointers. Multilevel index is stored on the disk along with the actual database files. As the size of the database grows, so does the size of the indices. There is an immense need to keep the index records in the main memory so as to speed up the search operations. If single-level index is used, then a large size index cannot be kept in memory which leads to multiple disk accesses.
 
-![Multi-level Index](fig/multi_level_index.png)
+![Multi-level Index](../figures/multi_level_index.png)
 
 Multi-level Index helps in breaking down the index into several smaller indices in order to make the outermost level so small that it can be saved in a single disk block, which can easily be accommodated anywhere in the main memory.
 
@@ -46,7 +46,7 @@ A B+ tree is a balanced binary search tree that follows a multi-level index form
 
 Every leaf node is at equal distance from the root node. A B+ tree is of the order n where n is fixed for every B+ tree.
 
-![B+ tree](fig/b_plus_tree.png)
+![B+ tree](../figures/b_plus_tree.png)
 
 ## Internal nodes −
 
