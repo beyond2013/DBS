@@ -43,10 +43,10 @@ Course Logistics for Database Systems
 
 ## Course Assessment:  
 
-Mid term exam: 30 marks
-Terminal exam: 40 marks
-Quizes: 15 marks
-Assignments: 15 marks
+Mid term exam: 30 marks  
+Terminal exam: 40 marks  
+Quizes: 15 marks  
+Assignments: 15 marks  
 
 ## Reference Materials:
 
