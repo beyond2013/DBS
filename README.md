@@ -36,7 +36,7 @@ Course Logistics for Database Systems
 - [Structured Query Language (SQL)](30July2021.sql)
   + Joins and sub-queries in SQL
   + Grouping and aggregation in SQL
-- Concurrency control
+- [Concurrency control](markdown/concurrency.md)
 - Database backup and recovery
 - [Indexes](markdown/indexing.md)
 - [NoSQL systems](markdown/nosql.md)
