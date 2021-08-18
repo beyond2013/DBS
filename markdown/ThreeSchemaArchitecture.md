@@ -8,7 +8,7 @@
 - The three schema architecture contains three-levels. It breaks the database down into three different categories.
 - The three-schema architecture is as follows:
 
-![DBMS Three schema Architecture](dbms-three-schema-architecture.png)
+![DBMS Three schema Architecture](../figures/dbms-three-schema-architecture.png)
 
 - The above diagram shows the DBMS architecture.
 - Mapping is used to transform the request and response between various database levels of architecture.
