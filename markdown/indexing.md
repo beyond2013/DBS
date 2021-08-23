@@ -15,8 +15,8 @@ Indexing is defined based on its indexing attributes. Indexing can be of the fol
 
 Ordered Indexing is of two types
 
-**Dense Index**
-**Sparse Index**
+**Dense Index**  
+**Sparse Index**  
 
 ## Dense Index
 
