@@ -9,7 +9,7 @@ Course Logistics for Database Systems
 - [Basic database concepts](markdown/introduction.md)
 - [Database approach vs file based system](markdown/introduction.md)
 - [Three level schema architecture](markdown/ThreeSchemaArchitecture.md)
-- [relational data model](markdown/intro2RelationalDatabases.md)
+- [relational data model](markdown/Intro2RelationalDatabases.md)
   + attributes
   + schemas
   + tuples
