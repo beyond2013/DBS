@@ -9,7 +9,7 @@ Course Logistics for Database Systems
 - [Basic database concepts](markdown/introduction.md)
 - [Database approach vs file based system](markdown/introduction.md)
 - [Three level schema architecture](markdown/ThreeSchemaArchitecture.md)
-- [relational data model](intro2RelationalDatabases.md)
+- [relational data model](markdown/intro2RelationalDatabases.md)
   + attributes
   + schemas
   + tuples
@@ -22,9 +22,9 @@ Course Logistics for Database Systems
      - Projection
      - Cartesian product
 - Types of joins
-  + [inner join](mysql_inner_join.md)
-  + [left join](mysql_left_join.md)
-  + [right join](mysql_right_join.md)
+  + [inner join](markdown/mysql_inner_join.md)
+  + [left join](markdown/mysql_left_join.md)
+  + [right join](markdown/mysql_right_join.md)
 - [Normalization](markdown/database-normalization.md)
   + functional dependencies
   + normal forms
