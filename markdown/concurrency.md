@@ -2,7 +2,7 @@
 
 # Transactions and Concurrency Control
 
-Two closely related function any database should provide in order to it reliable are 
+Two closely related function any database should provide in order to be reliable are 
 
 1. Transaction support.
 2. Concurrency Control.
