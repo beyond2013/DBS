@@ -1,4 +1,4 @@
-**Contents presented here have been taken from 2nd Chapter Introduction to Relational Databases of the book Database Systems An Application-Oriented Approach 2nd Edition by Michael Kifer, Arthur Bernstein and Philip M. Lewis **
+**Contents presented here have been taken from 2nd Chapter "Introduction to Relational Databases", of the book "Database Systems An Application-Oriented Approach 2nd Edition", by Michael Kifer, Arthur Bernstein and Philip M. Lewis**
 
 # Introduction to Relational Databases
 
