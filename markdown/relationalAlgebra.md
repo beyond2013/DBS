@@ -18,10 +18,10 @@ The fundamental operations of relational algebra are as follows −
 
 We will discuss all these operations in the following sections.
 
-## Select Operation (\sigma)
+## Select Operation (σ)
 It selects tuples that satisfy the given predicate from a relation.
 
-**Notation**:  \sigma_{p}(r)
+**Notation**:  <img src="https://render.githubusercontent.com/render/math?math={\sigma_{p}(r)}">
 
 Where **σ** stands for selection predicate and r stands for relation. p is prepositional logic formula which may use connectors like **and**, **or**, and **not**. These terms may use relational operators like − =, ≠, ≥, < ,  >,  ≤.
 
