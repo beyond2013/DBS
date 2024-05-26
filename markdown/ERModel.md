@@ -62,16 +62,16 @@ The number of participating entities in a relationship defines the degree of the
 
 - **One-to-one** − One entity from entity set A can be associated with at most one entity of entity set B and vice versa.
 
-![One-to-one relation](fig/one_to_one_relation.png)
+![One-to-one relation](../figures/one_to_one_relation.png)
 
 - **One-to-many** − One entity from entity set A can be associated with more than one entities of entity set B however an entity from entity set B, can be associated with at most one entity.
 
-![One-to-many relation](fig/one_to_many_relation.png)
+![One-to-many relation](../figures/one_to_many_relation.png)
 
 - **Many-to-one** − More than one entities from entity set A can be associated with at most one entity of entity set B, however an entity from entity set B can be associated with more than one entity from entity set A.
 
-![Many-to-one relation](fig/many_to_one_relation.png)
+![Many-to-one relation](../figures/many_to_one_relation.png)
 
 - **Many-to-many** − One entity from A can be associated with more than one entity from B and vice versa.
 
-![Many-to-many relation](fig/many_to_many_relation.png)
+![Many-to-many relation](../figures/many_to_many_relation.png)
