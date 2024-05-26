@@ -1,3 +1,12 @@
+# Right Join
+
+Suppose we have the following three tables:
+1. teacher
+2. course
+3. course_teacher
+
+See the right join query below with its output to understand how it joins rows data from different tables.
+
 teacher
 
 ```

@@ -21,7 +21,7 @@ Course Logistics for Database Systems
      - Selection
      - Projection
      - Cartesian product
-- Types of joins
+- [Types of joins](markdown/joins.md)
   + [inner join](markdown/mysql_inner_join.md)
   + [left join](markdown/mysql_left_join.md)
   + [right join](markdown/mysql_right_join.md)
