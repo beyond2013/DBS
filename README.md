@@ -33,7 +33,7 @@ Course Logistics for Database Systems
   + attributes
   + relationship
   + entity-relationship diagrams
-- [Structured Query Language (SQL)](30July2021.sql)
+- [Structured Query Language (SQL)](markdown/sql.md)
   + Joins and sub-queries in SQL
   + Grouping and aggregation in SQL
 - [Concurrency control](markdown/concurrency.md)
