@@ -88,10 +88,10 @@ different base tables: Name comes from STUDENT; CrsCode and Grade come from TRAN
 
 One very important feature of SQL is that the programmer does not have to specify the algorithm the DBMS should use to satisfy a particular query.
 
-For example, tables are frequently defined to include auxiliary data structures, called indices, which make it possible to locate particular rows without using lengthy searches through the entire table. Thus, an index on the Id column of the STUDENT table might contain a list of pairs (Id, pointer) where the pointer points to the row of the table containing the corresponding Id. If such an index were present, the DBMS would automatically use it to find the row that satisfies the query [query1](/#query1.sql).
+For example, tables are frequently defined to include auxiliary data structures, called indices, which make it possible to locate particular rows without using lengthy searches through the entire table. Thus, an index on the Id column of the STUDENT table might contain a list of pairs (Id, pointer) where the pointer points to the row of the table containing the corresponding Id. If such an index were present, the DBMS would automatically use it to find the row that satisfies the query [query1](#query1.sql).
 
 
-If the table also had an index on the column Status, the DBMS would use that index to find the rows that satisfy the query [query2](/#query2.sql).
+If the table also had an index on the column Status, the DBMS would use that index to find the rows that satisfy the query [query2](#query2.sql).
 
 If this second index did not exist, the DBMS would automatically use some other method to satisfy ([query2])—for example, it might look at every row in the table in order to locate all rows having the value senior in the Status column. The programmer does not specify what method to use—just the condition the desired result table must satisfy.
 
