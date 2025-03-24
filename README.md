@@ -70,3 +70,5 @@ Assignments: 15 marks
 ## MySQL install guide
 
 [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/)
+
+[MySQL installation step by step](https://github.com/beyond2013/DBAnM/blob/master/installguide.md)
